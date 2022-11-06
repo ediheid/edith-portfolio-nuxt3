@@ -12,5 +12,8 @@
     "nuxt": "3.0.0-rc.13",
     "sass": "^1.56.0",
     "sass-loader": "^13.1.0"
+  },
+  "dependencies": {
+    "oh-vue-icons": "^1.0.0-rc3"
   }
 }
