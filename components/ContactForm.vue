@@ -18,9 +18,11 @@ const handleSubmit = () => {
 </template>
 
 <!-- setup scss module -->
+<!-- And research hoe to setup sass in nuxt3 -->
 <style lang="scss">
 .form {
   border: solid 3px red;
   padding: 1rem;
+  //   color: $test-text;
 }
 </style>
