@@ -1,0 +1,71 @@
+$test-text: green;
+
+$test-color: red;
+// Palette
+$soft-black: #0d1117;
+$black: black;
+$pale-grey: #cececc;
+$linen: #fffcf7;
+$evergreen: #093a1c;
+$indigo: #143464;
+$light-blue: #408faa;
+$pale-blue: #82b5c7;
+$papaya: #e49435;
+$jam: #b21071;
+$jade: #099a4d;
+$yellow: #fdd701;
+$blue: #03034b;
+
+// Fonts
+$jetbrains-bold-italic: "Jet-Brains-Mono-Bold-Italic";
+$jetbrains-regular: "Jet-Brains-Mono-Regular";
+$montserrat-semibold: "Montserrat-SemiBold";
+$montserrat-medium: "Montserrat-Medium";
+$montserrat-light: "Montserrat-Light";
+$jakarta-extrabold: "Jakarta-ExtraBold";
+$jakarta-semibold: "Jakarta-SemiBold";
+$jakarta-medium: "Jakarta-Medium";
+$jakarta-regular: "Jakarta-Regular";
+$jakarta-extra-light: "Jakarta-ExtraLight";
+
+// ? Global Variables
+$contact-form-modal-bg: $black;
+$contact-form-bg: rgba(0, 0, 0, 0.8);
+$contact-form-text-colour: $pale-grey;
+$contact-form-font: $montserrat-semibold;
+$contact-form-input-font: $montserrat-medium;
+$contact-form-focus-colour: $pale-grey;
+$error-message-text: $jam;
+$main-font-colour: $blue;
+$links-font-colour: $jam;
+$links-hover-colour: darken($pale-blue, 5%);
+$circle-button-font: $jakarta-regular;
+$headings-font: $jakarta-extrabold;
+$main-text-font: $montserrat-light;
+$paragraph-font-size: 1.8rem;
+// ? Global Nav Variables
+$nav-font: $jetbrains-regular;
+$nav-hover-font: $jetbrains-bold-italic;
+
+// ?  Home Variables
+$home-bg: $papaya;
+$home-page-main-text-colour: lighten($pale-grey, 2%);
+$home-side-bar-elements: lighten($pale-grey, 5%);
+$home-heading-font: $jakarta-semibold;
+$name-heading-font: $jakarta-extra-light;
+
+// ? Side Bar Variables
+$side-bar-contact-font: $jakarta-medium;
+$side-bar-hover-colour: $jam;
+
+// ? Logo variables
+$logo-font: $jetbrains-regular;
+$logo-font-italic: $jetbrains-bold-italic;
+$logo-colour: $jam;
+
+// ? Web View Nav Variables
+$web-view-hamburger-colour: $jam;
+$web-nav-bg: rgba(228, 148, 53, 0.8);
+$web-nav-bg-solid: $papaya;
+$web-navbar-text-colour: $jam;
+$web-nav-hover-colour: lighten($pale-grey, 15%);
