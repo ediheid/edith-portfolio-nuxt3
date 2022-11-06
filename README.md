@@ -10,6 +10,8 @@ Make sure to install the dependencies:
 # yarn
 yarn install
 
+use nvm --lts
+
 # npm
 npm install
 
