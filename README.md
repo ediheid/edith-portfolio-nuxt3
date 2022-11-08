@@ -49,3 +49,4 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/prese
 
 ### Icons
 https://icones.js.org/
+https://github.com/nuxt-modules/icon
