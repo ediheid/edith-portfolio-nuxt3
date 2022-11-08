@@ -11,6 +11,8 @@ Make sure to install the dependencies:
 yarn install
 
 use nvm --lts
+18.12.1 at time of setup
+
 
 # npm
 npm install
@@ -42,3 +44,8 @@ npm run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+
+## Dependencies
+
+### Icons
+https://icones.js.org/
