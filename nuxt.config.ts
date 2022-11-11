@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   modules: ['nuxt-icon'],
 
+  typescript: {
+    strict: true
+  },
+
   vite: {
     css: {
       preprocessorOptions: {

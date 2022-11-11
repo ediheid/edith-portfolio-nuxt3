@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
+
+defineProps<{
+ CloseContactForm: unknown;
+}>();
+
 const name = ref("");
 
 const handleSubmit = () => {
@@ -9,6 +14,8 @@ const handleSubmit = () => {
 
 <template>
   <div>
+<button @click="CloseContactForm()">Close</button>
+
     <form :class="[$style.form]" @submit.prevent="handleSubmit">
       <label>Name</label>
       <input type="text" v-model="name" />
@@ -24,6 +31,7 @@ const handleSubmit = () => {
   border: solid 3px red;
   padding: 1rem;
   color: $test-text;
+  background: black;
 
   @include test
 }
