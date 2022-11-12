@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { SocialMediaIconNames, SocialMediaUrls } from "../enums/index";
-// import ContactForm from './ContactForm.vue'
+import { isContactOpen } from "../state/contactFormState";
 
 defineProps<{
   test: string;
 }>();
 
-const isContactFormOpen = ref(false);
+// state
+const isContactFormOpen = isContactOpen;
 
+// icons and names
 const iconNames = Object.values(SocialMediaIconNames);
 const links = Object.values(SocialMediaUrls);
 
@@ -29,11 +31,8 @@ const socialMediaArr = socialMediaIds.map((id, val) => {
 
 <template>
   <div :class="$style['sidebar-container']">
-    <ContactForm
-      :open="isContactFormOpen"
-      @closeContactForm="isContactFormOpen = !isContactFormOpen"
-    />
-
+    <!-- <ContactForm :open="isContactFormOpen" @closeContactForm="isContactFormOpen = !isContactFormOpen" /> -->
+    <ContactForm :open="isContactFormOpen" />
     <button @click="isContactFormOpen = true" :class="$style['contact-button']">
       Contact Form
     </button>

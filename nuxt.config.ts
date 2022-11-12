@@ -1,10 +1,13 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['nuxt-icon'],
+  modules: ["nuxt-icon"],
 
-  typescript: {
-    strict: true
-  },
+  // todo: if I can't get it working then use @fontface imports
+  // buildModules: ["@nuxtjs/google-fonts"],
+  // todo: follow this issue when there is a solution.. https://github.com/nuxt-community/google-fonts-module/issues/109
+  // googleFonts: {
+  //   download: true
+  // },
 
   vite: {
     css: {
@@ -16,4 +19,3 @@ export default defineNuxtConfig({
     },
   },
 });
- 
