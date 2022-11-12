@@ -1,13 +1,30 @@
 <script setup lang="ts">
-import { SocialMediaUrls } from "../enums/index";
+import { SocialMediaIconNames, SocialMediaUrls } from "../enums/index";
 // import ContactForm from './ContactForm.vue'
-
 
 defineProps<{
   test: string;
 }>();
 
 const isContactFormOpen = ref(false);
+
+const iconNames = Object.values(SocialMediaIconNames);
+const links = Object.values(SocialMediaUrls);
+
+const socialMediaIds: number[] = [];
+let counter = 0;
+iconNames.forEach(function () {
+  counter++;
+  socialMediaIds.push(counter);
+});
+
+const socialMediaArr = socialMediaIds.map((id, val) => {
+  return {
+    id: id,
+    iconName: iconNames[val],
+    iconLink: links[val],
+  };
+});
 </script>
 
 <template>
@@ -24,35 +41,14 @@ const isContactFormOpen = ref(false);
     <div :class="$style['vertical-line']"></div>
 
     <NuxtLink
-      :to="`${SocialMediaUrls.linkedIn}`"
+      v-for="item in socialMediaArr"
+      :key="item.id"
+      :to="item.iconLink"
       target="_blank"
       rel="noopener noreferrer"
       :class="$style['social-media-links']"
-      ><Icon name="uil:linkedin-alt"
-    /></NuxtLink>
-    <NuxtLink
-      :to="`${SocialMediaUrls.gitHub}`"
-      target="_blank"
-      rel="noopener noreferrer"
-      :class="$style['social-media-links']"
-    >
-      <Icon name="uil:github-alt"
-    /></NuxtLink>
-    <NuxtLink
-      :to="`${SocialMediaUrls.instagram}`"
-      target="_blank"
-      rel="noopener noreferrer"
-      :class="$style['social-media-links']"
-    >
-      <Icon name="ion:logo-instagram"
-    /></NuxtLink>
-    <NuxtLink
-      :to="`${SocialMediaUrls.darkroom}`"
-      target="_blank"
-      rel="noopener noreferrer"
-      :class="$style['social-media-links']"
-      ><Icon name="lucide:shopping-bag"
-    /></NuxtLink>
+      ><Icon :name="item.iconName" />
+    </NuxtLink>
   </div>
 </template>
 
