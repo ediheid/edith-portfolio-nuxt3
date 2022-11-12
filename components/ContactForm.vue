@@ -2,7 +2,7 @@
 import { ref } from "vue";
 
 defineProps<{
- CloseContactForm: unknown;
+  open: boolean;
 }>();
 
 const name = ref("");
@@ -13,8 +13,8 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div>
-<button @click="CloseContactForm()">Close</button>
+  <div v-if="open">
+    <button @click="$emit('closeContactForm')">Close</button>
 
     <form :class="[$style.form]" @submit.prevent="handleSubmit">
       <label>Name</label>
@@ -24,8 +24,6 @@ const handleSubmit = () => {
   </div>
 </template>
 
-<!-- setup scss module -->
-<!-- And research hoe to setup sass module in nuxt3 -->
 <style lang="scss" module>
 .form {
   border: solid 3px red;
@@ -33,6 +31,6 @@ const handleSubmit = () => {
   color: $test-text;
   background: black;
 
-  @include test
+  @include test;
 }
 </style>

@@ -2,31 +2,22 @@
 import { SocialMediaUrls } from "../enums/index";
 // import ContactForm from './ContactForm.vue'
 
+
 defineProps<{
   test: string;
 }>();
 
-const isContactFormOpen = ref({
-  buttonTrigger: false,
-});
-
-const openContactFormModal = (trigger: { buttonTrigger: boolean; }) => {
-  isContactFormOpen.value[trigger] = !isContactFormOpen.value[trigger];
-  // console.log(isContactFormOpen.value)
-};
+const isContactFormOpen = ref(false);
 </script>
 
 <template>
   <div :class="$style['sidebar-container']">
     <ContactForm
-      v-if="isContactFormOpen.buttonTrigger"
-      :CloseContactForm="() => openContactFormModal('buttonTrigger')"
+      :open="isContactFormOpen"
+      @closeContactForm="isContactFormOpen = !isContactFormOpen"
     />
 
-    <button
-      @click="() => openContactFormModal('buttonTrigger')"
-      :class="$style['contact-button']"
-    >
+    <button @click="isContactFormOpen = true" :class="$style['contact-button']">
       Contact Form
     </button>
 
