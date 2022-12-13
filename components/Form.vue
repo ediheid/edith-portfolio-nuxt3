@@ -8,6 +8,7 @@ const name = ref("");
 
 const handleSubmit = () => {
   console.log("test:", name.value);
+  name.value = "";
 };
 </script>
 
