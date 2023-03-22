@@ -1,3 +1,5 @@
+// todo: cleanup unused variables
+
 $test-text: green;
 
 $test-color: red;
@@ -13,8 +15,14 @@ $pale-blue: #82b5c7;
 $papaya: #e49435;
 $jam: #b21071;
 $jade: #099a4d;
-$yellow: #fdd701;
+$sun-yellow: #fdd701;
 $blue: #03034b;
+
+// new
+$hot-pink: #d342c3;
+$pink-lace: #fdddf4;
+
+
 
 // Fonts
 $jetbrains-bold-italic: "Jet-Brains-Mono-Bold-Italic";
@@ -43,25 +51,28 @@ $circle-button-font: $jakarta-regular;
 $headings-font: $jakarta-extrabold;
 $main-text-font: $montserrat-light;
 $paragraph-font-size: 1.8rem;
+
 // ? Global Nav Variables
 $nav-font: $jetbrains-regular;
 $nav-hover-font: $jetbrains-bold-italic;
 
 // ?  Home Variables
-$home-bg: $papaya;
+$home-bg: $sun-yellow;
 $home-page-main-text-colour: lighten($pale-grey, 2%);
-$home-side-bar-elements: lighten($pale-grey, 5%);
 $home-heading-font: $jakarta-semibold;
 $name-heading-font: $jakarta-extra-light;
 
 // ? Side Bar Variables
 $side-bar-contact-font: $jakarta-medium;
-$side-bar-hover-colour: $jam;
+$side-bar-hover-colour: $pink-lace;
+$home-side-bar-elements: $hot-pink;
 
 // ? Logo variables
 $logo-font: $jetbrains-regular;
 $logo-font-italic: $jetbrains-bold-italic;
-$logo-colour: $jam;
+$logo-colour: $hot-pink;
+
+//? All Nav Variables
 
 // ? Web View Nav Variables
 $web-view-hamburger-colour: $jam;

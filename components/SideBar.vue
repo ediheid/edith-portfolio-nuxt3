@@ -107,8 +107,9 @@ const socialMediaArr = socialMediaIds.map((id, val) => {
   z-index: 10;
 
   &:active {
-    transform: scale(1.2);
+    transform: scale(1.2) ;
     color: $side-bar-hover-colour;
+    
   }
 }
 
