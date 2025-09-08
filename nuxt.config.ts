@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   // googleFonts: {
   //   download: true
   // },
+  compatibilityDate: "2025-09-08",
 
   vite: {
     css: {
